@@ -58,7 +58,7 @@ void calc() {
 void flush_LED() {
     if (rev > 7000 ) {
       //pass
-    } else if (rev > 5000)  {
+    } else if (rev > 6750)  {
       colorWipe(strip.Color(WAN_VAL, 0, 0));        // Red Warning
       delay(100);
       colorWipe(strip.Color(0, 0, 0));              // Black
@@ -67,14 +67,14 @@ void flush_LED() {
       for ( int i = 0 ; i<8 ; i++ ) {
         strip.setPixelColor(i, strip.Color(0, 0, 0));
       }
-      if (rev>=   0) { strip.setPixelColor(0, strip.Color(0, MAX_VAL, 0));  }
-      if (rev>=1000) { strip.setPixelColor(1, strip.Color(0, MAX_VAL, 0));  }
-      if (rev>=1500) { strip.setPixelColor(2, strip.Color(MAX_VAL, MAX_VAL, 0)); }
-      if (rev>=2000) { strip.setPixelColor(3, strip.Color(MAX_VAL, MAX_VAL, 0)); }
-      if (rev>=2500) { strip.setPixelColor(4, strip.Color(MAX_VAL, MAX_VAL/2, 0));  }
-      if (rev>=3000) { strip.setPixelColor(5, strip.Color(MAX_VAL, MAX_VAL/2, 0));  }
-      if (rev>=3500) { strip.setPixelColor(6, strip.Color(WAN_VAL, 0, 0));  }
-      if (rev>=4000) { strip.setPixelColor(7, strip.Color(WAN_VAL, 0, 0));  }
+      if (rev>=3000) { strip.setPixelColor(0, strip.Color(0, MAX_VAL, 0));  }
+      if (rev>=3500) { strip.setPixelColor(1, strip.Color(0, MAX_VAL, 0));  }
+      if (rev>=4000) { strip.setPixelColor(2, strip.Color(MAX_VAL, MAX_VAL, 0)); }
+      if (rev>=4500) { strip.setPixelColor(3, strip.Color(MAX_VAL, MAX_VAL, 0)); }
+      if (rev>=5000) { strip.setPixelColor(4, strip.Color(MAX_VAL, MAX_VAL/2, 0));  }
+      if (rev>=5500) { strip.setPixelColor(5, strip.Color(MAX_VAL, MAX_VAL/2, 0));  }
+      if (rev>=6000) { strip.setPixelColor(6, strip.Color(WAN_VAL, 0, 0));  }
+      if (rev>=6500) { strip.setPixelColor(7, strip.Color(WAN_VAL, 0, 0));  }
       strip.show();
     }
 }
